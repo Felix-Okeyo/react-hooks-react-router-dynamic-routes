@@ -6,13 +6,13 @@ function MovieShow ({ movies }){
 const params = useParams();
     console.log(params);
 
-    const movies = movies.find(movie => movie.id === parseInt(params.movieId))
+    // const movies = movies.find(movie => movie.id === parseInt(params.movieId))
     
     return (
         <div>
             {/* And here we access the `movieId` stored in `params` to render 
         information about the selected movie */}
-            <h3>{movie.title}</h3>
+            <h3>{movies[params.movieId].title}</h3>
         </div>
     )
 }
